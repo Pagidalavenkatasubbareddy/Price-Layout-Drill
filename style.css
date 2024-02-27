@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 100%;
+  }
+  .container {
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+    margin: auto;
+    max-width: fit-content;
+  }
+  body {
+    background-color: #F7F7FF;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 28px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #8F92EA;
+  }
+  
+  input:checked + .slider:before {
+  
+    transform: translateX(26px);
+  }
+  
+  .pricing {
+      font-size: 3rem;
+      color: #5d5d66;
+      font-weight: bolder;
+      margin: 2rem 0;
+  }
+  .dollar {
+    font-size: 3rem;
+  }
+  .subscription {
+      margin-bottom: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-weight: bold;
+      color: #808088;
+      font-size: 1.1rem;
+  }
+  .card {
+    max-width: fit-content;
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #5d5d66;
+    background-color: white;
+  }
+  .card-middle {
+    transform: scale(1.1);
+    background-color: #8787dc;
+    color: white;
+    max-width: fit-content;
+    text-align: center;
+    padding: 3rem 2rem;
+    transition: 0.4s;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 6px rgba(173, 173, 197, 0.2);
+  }
+  .card-header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  .card-price {
+    font-size: 5rem;
+    font-weight: bold;
+    padding: 2.2rem 0;
+    border-bottom: 1px solid #abb1c7;
+  }
+  .description {
+    margin-bottom: 3rem;
+  }
+  .description > div {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #abb1c7;
+    font-weight: bold;
+  }
+  .btn {
+    border: 1px solid #abb1c7;
+    color: white;
+    padding: 1rem 7rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    background:  linear-gradient(90deg, #9FA3EE, #6A6EDA);
+    cursor: pointer;
+  }
+  
+  .btn-middle {
+    color: #5d5d66;
+    background: white;
+  }
+  
+  @media (max-width: 375px) {
+    .container {
+      flex-direction: column;
+      padding: 0 1rem;
+    }
+    .card-middle {
+      transform: scale(1);
+    }
+    html {
+      font-size: 70%;
+    }
+  }
